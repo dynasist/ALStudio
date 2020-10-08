@@ -62,6 +62,8 @@ AL Studio can process the complete workspace information whether it be from down
  -   Organize selected entries into scopes (bookmarks).
  -   Advanced data grid allows customized filtering.
 
+![](https://raw.githubusercontent.com/dynasist/ALStudio/master/media/alhome.png)
+
 ---
  ## [Scopes (Bookmarks)](#scopes-bookmarks)
 
@@ -77,6 +79,8 @@ Scopes are maintained in a local json file that can be excluded from source cont
  -   Scope entries can be added/removed individually
  -   Clicking on a scope entry opens related object editor or source code
  -   Deletion of a scope also deletes the related entries
+
+![](https://raw.githubusercontent.com/dynasist/ALStudio/master/media/alscopes.png)
 
 ---
  ## [Workspace wizard](#workspace-wizard)
@@ -97,6 +101,8 @@ This screen helps with creating complete workspaces consisting  multiple apps. T
      -   Set to add Test project
      -   Set Test project range
 
+![](https://raw.githubusercontent.com/dynasist/ALStudio/master/media/alworkspacewizard.png)
+
 ---
 
 ## [Translation Overview](#translation-overview)
@@ -108,6 +114,8 @@ This screen provides a matrix-like summary of all available XLF translations fou
 -   View translations as filterable grid
 -   Quick search
 -   Export to Excel
+
+![](https://raw.githubusercontent.com/dynasist/ALStudio/master/media/altranslations.png)
 
 ---
 
@@ -123,6 +131,8 @@ This view allows developers and consultants to overview and edit table structure
 -   Property window for selected item that shows related properties
 -   Display table and its extensions in a single comprehensive view
 -   Navigate to table or specific extension source
+
+![](https://raw.githubusercontent.com/dynasist/ALStudio/master/media/altable.png)
 
 ---
 
@@ -142,6 +152,15 @@ This view allows developers and consultants to overview and edit page layout wit
      -   Actions with RunObject property are navigable to load the related Page Designer
 -   Screenshot: you can take a full-page screenshot of a given page.
 
+### Layout:
+![](https://raw.githubusercontent.com/dynasist/ALStudio/master/media/alpage.png)
+
+### Actions:
+![](https://raw.githubusercontent.com/dynasist/ALStudio/master/media/alpage3.png)
+
+### Changes (extensions):
+![](https://raw.githubusercontent.com/dynasist/ALStudio/master/media/alpage2.png)
+
 ---
 
 ## [Enum editor](#enum-editor)
@@ -156,6 +175,8 @@ This view allows developers and consultants to overview and edit enum structure.
 -   Display table and its extensions in a single comprehensive view  
 -   Navigate to table or specific extension source
 
+![](https://raw.githubusercontent.com/dynasist/ALStudio/master/media/alenum.png)
+
 ---
 
 ## [Codeunit / Interface / Control Add-in viewers](#codeunitinterfacecontrol-add-in-viewers)
@@ -168,6 +189,8 @@ This window provides a general overview of any codeunit, interface of control ad
 -   Show Properties
 -   Show source code
 -   Export method signatures to markdown file
+
+![](https://raw.githubusercontent.com/dynasist/ALStudio/master/media/alcodeunit.png)
 
 ---
 
@@ -194,6 +217,8 @@ Command line availability streamlines product activation and helps integrating d
 
 -   Product activation
 -   Documentation generation
+
+![](https://raw.githubusercontent.com/dynasist/ALStudio/master/media/ALStudio_CLI.png)
 
 ---
 
