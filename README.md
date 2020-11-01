@@ -35,6 +35,7 @@ AL Studio is a set of visual tools for editing, navigating or documenting AL Obj
 
      -   [New workspace wizard](#workspace-wizard)
      -   [Translation overview](#translation-overview)
+     -   [Table Fields, Fielgroups, Keys](#table-fields)
      -   [Table editor](#table-editor)
      -   [Page editor](#section)
      -   [Enum editor](#enum-editor)
@@ -117,6 +118,22 @@ This screen provides a matrix-like summary of all available XLF translations fou
 -   Export to Excel
 
 ![](https://raw.githubusercontent.com/dynasist/ALStudio/master/media/altranslations.png)
+
+---
+
+## [Table Fields, Fieldgroups, Keys](#table-fields)
+
+This screen provides a complete list of all fields, fieldgroups and keys that are present within workspace objects or symbol packages.
+
+### Features
+
+-   View all table Fields
+-   View all table Fieldgroups
+-   View all table Keys
+-   Quick search
+-   One-click navigation by clicking on Table or Field/Fieldgroup/Key name
+
+![](https://raw.githubusercontent.com/dynasist/ALStudio/master/media/alstudio_tablefields.png)
 
 ---
 
