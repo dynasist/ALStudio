@@ -35,23 +35,23 @@ AL Studio is a set of visual tools for editing, navigating or documenting AL Obj
 
      -   [New workspace wizard](#workspace-wizard)
      -   [Translation overview](#translation-overview)
-     -   [Table Fields, Fielgroups, Keys](#table-fields)
+     -   [Table Fields, Fielgroups, Keys](#table-fields-fieldgroups-keys)
      -   [Table editor](#table-editor)
      -   [Page editor](#section)
      -   [Enum editor](#enum-editor)
-     -   [Codeunit viewer](#codeunitinterfacecontrol-add-in-viewers)
-     -   [Interface viewer](#codeunitinterfacecontrol-add-in-viewers)
-     -   [Control Add-in viewer](#codeunitinterfacecontrol-add-in-viewers)
+     -   [Codeunit viewer](#codeunit-interface-control-add-in-viewers)
+     -   [Interface viewer](#codeunit-interface-control-add-in-viewers)
+     -   [Control Add-in viewer](#codeunit-interface-control-add-in-viewers)
 
  -   Navigation function for Objects, Event Publishers/Subscribers
  -   [Generate Internal/Public API documentation](#generate-documentation)
  -   [CLI interface for automation](#command-line-interface)
- -   [External API for VSCode extension developers](#external-api)
+ -   [External API for VSCode extension developers](#external-api-for-vscode-extension-developers)
  -   [Known Issues](#known-issues)
  -   [Planned Features](#planned-features)
 
 ---
-## [Workspace overview: AL Home](#workspace-overview-al-home)
+## Workspace overview: AL Home
 
 AL Home screen is automatically loading after opening a VS Code folder / workspace. It is designed to function as a starting dashboard for usual developer/consultant activities.
 AL Studio can process the complete workspace information whether it be from downloaded symbols, runtime symbols or source files.
@@ -68,7 +68,7 @@ AL Studio can process the complete workspace information whether it be from down
 ![](https://raw.githubusercontent.com/dynasist/ALStudio/master/media/alhome.png)
 
 ---
- ## [Scopes (Bookmarks)](#scopes-bookmarks)
+ ## Scopes (Bookmarks)
 
 You can create focused sets of objects, event publishers or subscribers using the object list on AL Home screen and the "Add selected to Scope" button.
 
@@ -86,7 +86,7 @@ Scopes are maintained in a local json file that can be excluded from source cont
 ![](https://raw.githubusercontent.com/dynasist/ALStudio/master/media/alscopes.png)
 
 ---
- ## [Workspace wizard](#workspace-wizard)
+ ## Workspace wizard
 
 This screen helps with creating complete workspaces consisting  multiple apps. The command is also available on the sidebar as a button when no workspace is open.
 
@@ -108,7 +108,7 @@ This screen helps with creating complete workspaces consisting  multiple apps. T
 
 ---
 
-## [Translation Overview](#translation-overview)
+## Translation Overview
 
 This screen provides a matrix-like summary of all available XLF translations found in the workspace. Left columns represent data from generated XLF files, translations are dynamically displayed as additional columns.
 
@@ -122,7 +122,7 @@ This screen provides a matrix-like summary of all available XLF translations fou
 
 ---
 
-## [Table Fields, Fieldgroups, Keys](#table-fields)
+## Table Fields, Fieldgroups, Keys
 
 This screen provides a complete list of all fields, fieldgroups and keys that are present within workspace objects or symbol packages.
 
@@ -138,7 +138,7 @@ This screen provides a complete list of all fields, fieldgroups and keys that ar
 
 ---
 
-## [Table editor](#table-editor´)
+## Table editor
 
 This view allows developers and consultants to overview and edit table structure.
 
@@ -155,7 +155,7 @@ This view allows developers and consultants to overview and edit table structure
 
 ---
 
-## [Page editor](#page-editor)
+## Page editor
 
 This view allows developers and consultants to overview and edit page layout without having to setup docker or local Business Central instances.
 
@@ -182,7 +182,7 @@ This view allows developers and consultants to overview and edit page layout wit
 
 ---
 
-## [Enum editor](#enum-editor)
+## Enum editor
 
 This view allows developers and consultants to overview and edit enum structure.
 
@@ -198,7 +198,7 @@ This view allows developers and consultants to overview and edit enum structure.
 
 ---
 
-## [Codeunit / Interface / Control Add-in viewers](#codeunitinterfacecontrol-add-in-viewers)
+## Codeunit, Interface, Control Add-in viewers
 
 This window provides a general overview of any codeunit, interface of control add-in object. Methods and Event publishers/subscribers are displayed on two columns next to each other.
 
@@ -213,7 +213,7 @@ This window provides a general overview of any codeunit, interface of control ad
 
 ---
 
-## [Generate documentation](#generate-documentation)
+## Generate documentation
 
 This module allows you to create a complete, markdown-based API documentation for a project or workspace. Markdown is a human-readable format that can be converted to HMTL or many other formats using external tools.
 
@@ -228,7 +228,7 @@ Generated files are internally navigable, there is a table of contents for objec
 
 ---
 
-## [Command-line Interface](#command-line-interface)
+## Command-line Interface
 
 Command line availability streamlines product activation and helps integrating documentation generation, transferfield validation into DevOps build process.
 
@@ -321,7 +321,7 @@ Result is displayed on command line output and also can be saved into a json fil
 
 ---
 
-## [External API for VSCode extension developers](#external-api)
+## External API for VSCode extension developers
 
 AL Studio has a public API that is available for other VSCode extension developers.
 This API is provided even in the Free version and can be re-used by free/opensource extensions free of charge, without purchasing license.
@@ -391,7 +391,7 @@ async function getAlStudioAPI() {
 
 ---
 
-## [Known Issues](#known-issues)
+## Known Issues
 Issues to be fixed before first release:
 
 -   Saving changes from Table/Page/Enum editors to their respective files may fail and is unstable.
@@ -409,7 +409,7 @@ Issues to be fixed before first release:
      -   **[Solved]** Display of System parts and User Controls are not yet implemented.
  -   CLI Documentation Generation: "Public Only" flag does not work.
 
-## [Planned Features](#planned-features)
+## Planned Features
 
 After first release:
  -   Create Languages/Edit Translations
