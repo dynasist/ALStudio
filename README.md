@@ -46,6 +46,7 @@ AL Studio is a set of visual tools for editing, navigating or documenting AL Obj
  -   Navigation function for Objects, Event Publishers/Subscribers
  -   [Generate Internal/Public API documentation](#generate-documentation)
  -   [CLI interface for automation](#command-line-interface)
+ -   [External API for VSCode extension developers](#external-api)
  -   [Known Issues](#known-issues)
  -   [Planned Features](#planned-features)
 
@@ -317,6 +318,76 @@ Result is displayed on command line output and also can be saved into a json fil
 * Failure returns ExitCode 1, so in DevOps it will break the build.
 
 ![](https://raw.githubusercontent.com/dynasist/ALStudio/master/media/alstudio_transferfields.png)
+
+---
+
+## [External API for VSCode extension developers](#external-api)
+
+AL Studio has a public API that is available for other VSCode extension developers.
+This API is provided even in the Free version and can be re-used by free/opensource extensions free of charge, without purchasing license.
+
+Main API functions:
+```
+export interface IExternalAPIService {
+    isWorkspaceScanned: boolean;
+    onWorkspaceScanned: Function | undefined;
+    getObjects(): Array<CollectorItemExternal>;
+    getALLanguageApiService(): IALLanguageApiService;
+}
+```
+
+Complete type definitions are available on GitHub: https://github.com/dynasist/ALStudio/blob/master/extension.d.ts
+
+### Properties
+
+#### **Syntax**
+```isWorkspaceScanned: boolean;```
+
+Indicates whether the initial workspace scanning has been finished.
+
+#### **Syntax**
+```onWorkspaceScanned: Function | undefined;```
+
+Event fired when the initial workspace scanning is finished. You can subscribe to this event by assigning a simple function to it.
+
+Example:
+```
+alStudioAPI.onWorkspaceScanned = () => {
+    console.log('Workspace has been scanned!');
+}
+```
+
+### Methods
+
+#### **Syntax**
+```getObjects(): Array<CollectorItemExternal>;```
+
+Gets the complete set of objects collected from files and symbol packages. It containes Objects, EventPublishers and EventSubscribers as well.
+This list is automatically maintained by AL Studio, calling *getObjects()* will always return the latest, updated set.
+
+#### **Syntax**
+```getALLanguageApiService(): IALLanguageApiService;```
+
+Gets a simplified API reference for *AL Language Extension* itself.
+
+
+### Getting an AL Studio API reference in another VSCode extension:
+
+```
+import { extensions } from 'vscode';
+
+async function getAlStudioAPI() {
+	let alStudio: Extension<any> = extensions.getExtension('dynasist.al-studio')!;
+	if (alStudio) {
+		if (!alStudio.isActive) {
+			await alStudio.activate();
+		}
+
+		return alStudio.exports;
+	}
+}
+
+```
 
 ---
 
