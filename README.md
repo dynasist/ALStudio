@@ -259,7 +259,7 @@ You need to specify the complete path including filename.
 
 Validation works using ruleset files named `transferfields.rules.json` that are placed into the root of each app folder. You can define rules per app.
 
-```
+```json
 [
     {
         "Name": "Custom Table Transferfields",
@@ -327,7 +327,7 @@ AL Studio has a public API that is available for other VSCode extension develope
 This API is provided even in the Free version and can be re-used by free/opensource extensions free of charge, without purchasing license.
 
 Main API functions:
-```
+```javascript
 export interface IExternalAPIService {
     isWorkspaceScanned: boolean;
     onWorkspaceScanned: Function | undefined;
@@ -341,17 +341,21 @@ Complete type definitions are available on GitHub: https://github.com/dynasist/A
 ### Properties
 
 #### **Syntax**
-```isWorkspaceScanned: boolean;```
+```javascript
+isWorkspaceScanned: boolean;
+```
 
 Indicates whether the initial workspace scanning has been finished.
 
 #### **Syntax**
-```onWorkspaceScanned: Function | undefined;```
+```javascript
+onWorkspaceScanned: Function | undefined;
+```
 
 Event fired when the initial workspace scanning is finished. You can subscribe to this event by assigning a simple function to it.
 
 Example:
-```
+```javascript
 alStudioAPI.onWorkspaceScanned = () => {
     console.log('Workspace has been scanned!');
 }
@@ -360,20 +364,24 @@ alStudioAPI.onWorkspaceScanned = () => {
 ### Methods
 
 #### **Syntax**
-```getObjects(): Array<CollectorItemExternal>;```
+```javascript 
+getObjects(): Array<CollectorItemExternal>;
+```
 
 Gets the complete set of objects collected from files and symbol packages. It containes Objects, EventPublishers and EventSubscribers as well.
 This list is automatically maintained by AL Studio, calling *getObjects()* will always return the latest, updated set.
 
 #### **Syntax**
-```getALLanguageApiService(): IALLanguageApiService;```
+```javascript
+getALLanguageApiService(): IALLanguageApiService;
+```
 
 Gets a simplified API reference for *AL Language Extension* itself.
 
 
 ### Getting an AL Studio API reference in another VSCode extension:
 
-```
+```javascript
 import { extensions } from 'vscode';
 
 async function getAlStudioAPI() {
@@ -382,7 +390,7 @@ async function getAlStudioAPI() {
         if (!alStudio.isActive) {
             await alStudio.activate();
         }
-        
+
         return alStudio.exports;
     }
 }
