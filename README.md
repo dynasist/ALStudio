@@ -377,14 +377,14 @@ Gets a simplified API reference for *AL Language Extension* itself.
 import { extensions } from 'vscode';
 
 async function getAlStudioAPI() {
-	let alStudio: Extension<any> = extensions.getExtension('dynasist.al-studio')!;
-	if (alStudio) {
-		if (!alStudio.isActive) {
-			await alStudio.activate();
-		}
-
-		return alStudio.exports;
-	}
+    let alStudio: Extension<any> = extensions.getExtension('dynasist.al-studio')!;
+    if (alStudio) {
+        if (!alStudio.isActive) {
+            await alStudio.activate();
+        }
+        
+        return alStudio.exports;
+    }
 }
 
 ```
