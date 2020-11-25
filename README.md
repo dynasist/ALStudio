@@ -14,12 +14,10 @@ This repository is to provide a place for discussion, tracking issues and sugges
 
 # Note:
 
-## **This is a premium extension that is currently under development in beta phase. While in beta, all features are accessible without license.**
-## After it reaches final v1.0, these features remain free:
-* [Workspace overview](#workspace-overview-al-home)
-* [Scopes (bookmarks)](#scopes-bookmarks)
-* Navigation function for Objects, Event Publishers/Subscribers
-* [New workspace wizard](#workspace-wizard) 
+## **This is a premium extension with a free, community edition.**
+## **Premium subscription can be purchased on our website: https://al.studio/pricing**
+### **While in public beta, all features are accessible without license.**
+### **Public beta ends on 30th November, 2020.**
 
 ---
 
@@ -50,6 +48,13 @@ AL Studio is a set of visual tools for editing, navigating or documenting AL Obj
  -   [Known Issues](#known-issues)
  -   [Planned Features](#planned-features)
 
+---
+## Community Features
+* [Workspace overview](#workspace-overview-al-home)
+* [Scopes (bookmarks)](#scopes-bookmarks)
+* Navigation function for Objects, Event Publishers/Subscribers
+* [New workspace wizard](#workspace-wizard) 
+* [External API for VSCode extension developers](#external-api-for-vscode-extension-developers)
 ---
 ## Workspace overview: AL Home
 
