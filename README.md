@@ -337,6 +337,8 @@ export interface IExternalAPIService {
     isWorkspaceScanned: boolean;
     onWorkspaceScanned: Function | undefined;
     getObjects(): Array<CollectorItemExternal>;
+    getNextId(type: ALObjectType, projectNameOrFilePath: string): Promise<number>;
+    getSymbolUri(type: ALObjectType, name: string, standardFormat: boolean): Uri | null;
     getALLanguageApiService(): IALLanguageApiService;
 }
 ```
@@ -382,6 +384,30 @@ getALLanguageApiService(): IALLanguageApiService;
 ```
 
 Gets a simplified API reference for *AL Language Extension* itself.
+
+
+#### **Syntax**
+
+```javascript
+getSymbolUri(type: ALObjectType, name: string, standardFormat: boolean = false): Uri | null;
+```
+
+Gets generated preview URI for symbol objects. This can be used to manually show source code preview window of specific symbols.
+
+#### **Syntax**
+
+```javascript
+getNextId(type: ALObjectType, projectNameOrFilePath: string): Promise<number>;
+```
+
+Gets the next available object ID for the given object type in the specified Application name or file path. 
+`projectNameOrFilePath` can be an:
+1. App name exactly how it is defined in `app.json`, e.g. `Base Application`
+2. Absolute filepath of any object within an app folder
+3. Absolute filepath of the app folder
+4. Absolute filepath of the app.json file
+
+In latter case, the proper `app.json` will be implicitly search for.
 
 
 ### Getting an AL Studio API reference in another VSCode extension:
