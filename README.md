@@ -25,6 +25,10 @@ This repository is to provide a place for discussion, tracking issues and sugges
 
 AL Studio is a set of visual tools for editing, navigating or documenting AL Objects without complex running environments. It is built with a holistic approach that aims to provide users with better understanding of their whole workspace.
 
+## Product showcase
+
+Visit out our [YouTube channel](https://www.youtube.com/channel/UCyLKtnecuIOiD13dfmlI64Q) to see AL Studio features in motion.
+
 ## Features at glance
 
 -   [Workspace overview](#workspace-overview-al-home)
