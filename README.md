@@ -15,9 +15,7 @@ This repository is to provide a place for discussion, tracking issues and sugges
 # Note:
 
 ## **This is a premium extension with a free, community edition.**
-## **Premium subscription can be purchased on our website: https://al.studio/pricing**
-### **While in public beta, all features are accessible without license.**
-### **Public beta ends on 30th November, 2020.**
+### **Premium subscription can be purchased on our website: https://al.studio/pricing**
 
 ---
 
