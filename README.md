@@ -36,6 +36,8 @@ Visit out our [YouTube channel](https://www.youtube.com/channel/UCyLKtnecuIOiD13
      -   [New workspace wizard](#workspace-wizard)
      -   [Translation overview](#translation-overview)
      -   [Table Fields, Fielgroups, Keys](#table-fields-fieldgroups-keys)
+     -   [Snapshots](#snapshots)
+     -   [Unified Search](#unified-search)
      -   [Table editor](#table-editor)
      -   [Page editor](#section)
      -   [Enum editor](#enum-editor)
@@ -57,6 +59,7 @@ Visit out our [YouTube channel](https://www.youtube.com/channel/UCyLKtnecuIOiD13
 * Navigation function for Objects, Event Publishers/Subscribers
 * [New workspace wizard](#workspace-wizard) 
 * [External API for VSCode extension developers](#external-api-for-vscode-extension-developers)
+
 ---
 ## Workspace overview: AL Home
 
@@ -144,6 +147,43 @@ This screen provides a complete list of all fields, fieldgroups and keys that ar
 ![](https://raw.githubusercontent.com/dynasist/ALStudio/master/media/alstudio_tablefields.png)
 
 ---
+
+## Snapshots
+
+Snapshots screen in AL Studio provides a visual interface to overview and examine recorded snapshots within the workspace.
+You can see the complete call-stack as a tree-view, and also the list of objects that were hit during the snapshot recording.
+
+**Note**: this feature is in preview and subject to change in the final release.
+
+### Features
+
+-   List of workspace snapshots as a Project - Snapshot parent-child tree
+-   Complete call-stack as a tree-view
+-   Related objects: individual objects that are related to a snapshot
+-   Start debugging for selected snapshot.
+-   One-click navigation to source of related objects
+
+![](https://raw.githubusercontent.com/dynasist/ALStudio/master/media/ALStudio_Snapshots.gif)
+
+---
+
+## Unified Search
+
+This screen provides a unified experience to search in many different areas of the complete workspace.
+
+### Features
+
+-   Search for Objects, Event Publishers, Subscribers
+-   Search for Table Fields, Groups or Keys,
+-   Search in Object Properties
+-   Search in Translation files
+-   Search in local source code
+-   Search in Symbol package source code (if included)
+
+
+![](https://raw.githubusercontent.com/dynasist/ALStudio/master/media/ALStudio_Search_Demo1.PNG)
+
+---	
 
 ## Table editor
 
@@ -387,7 +427,6 @@ getALLanguageApiService(): IALLanguageApiService;
 
 Gets a simplified API reference for *AL Language Extension* itself.
 
-
 #### **Syntax**
 
 ```javascript
@@ -410,7 +449,6 @@ Gets the next available object ID for the given object type in the specified App
 4. Absolute filepath of the app.json file
 
 In latter case, the proper `app.json` will be implicitly search for.
-
 
 ### Getting an AL Studio API reference in another VSCode extension:
 
